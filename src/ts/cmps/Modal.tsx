@@ -1,7 +1,12 @@
-export default function Modal() {
+interface IProps {
+    introModal: boolean,
+    onToggleModal: () => void
+}
+
+export default function Modal({ introModal, onToggleModal }: IProps) {
 
     return (
-        <article className="modal">
+        <article className={`modal ${introModal ? '' : 'close'}`}>
             <h1>Simons Says!</h1>
 
             <h3>👋 introduction</h3>
@@ -19,7 +24,7 @@ export default function Modal() {
             <h3>🏆 Good Luck!</h3>
             <p>Have fun!</p>
 
-            <button className="modal-btn">Let's Go!</button>
+            <button onClick={onToggleModal} className="modal-btn">Let's Go!</button>
         </article>
     )
 }
