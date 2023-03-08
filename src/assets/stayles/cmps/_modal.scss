@@ -1,0 +1,35 @@
+.modal {
+    position: absolute;
+    background: #272727;
+    left: 40%;
+    top: 20px;
+    padding: 20px;
+    border-radius: 10px;
+
+    h1 {
+        margin: 10px;
+    }
+
+    p {
+        margin: 10px 0;
+    }
+
+    &-btn {
+        background: #1a1a1a;
+        color: white;
+        position: absolute;
+        right: 20px;
+        bottom: 20px;
+        border: none;
+        border-radius: 6px;
+        outline: none;
+        padding: 0.3rem 1rem;
+        font-family: Tilt;
+        font-weight: bold;
+    }
+
+    &.close {
+        display: none;
+    }
+
+}
