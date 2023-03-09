@@ -1,12 +1,12 @@
 interface IProps {
-    introModal: boolean,
+    isIntroModalOpen: boolean,
     onToggleModal: () => void
 }
 
-export default function Modal({ introModal, onToggleModal }: IProps) {
+export default function Modal({ isIntroModalOpen, onToggleModal }: IProps) {
 
     return (
-        <article className={`modal ${introModal ? '' : 'close'}`}>
+        <article className={`modal ${isIntroModalOpen ? '' : 'close'}`}>
             <h1>Simons Says!</h1>
 
             <h3>👋 introduction</h3>
