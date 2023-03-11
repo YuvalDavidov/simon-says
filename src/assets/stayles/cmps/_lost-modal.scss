@@ -1,7 +1,7 @@
 .lost-modal {
     position: fixed;
     background-color: red;
-    background: #272727;
+    background: $bg-modal-color;
     left: 35vw;
     top: 20px;
     padding: 20px;
@@ -22,7 +22,7 @@
 
             border: none;
             border-radius: 20px;
-            background: #414040;
+            background-color: $bg-btns-color;
             color: white;
             margin-top: 10px;
         }
