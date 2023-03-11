@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import BoardGame from "../cmps/BoardGame"
+import LostModal from "../cmps/LostModal"
 import Modal from "../cmps/Modal"
 
 export interface IState {
@@ -20,12 +21,14 @@ export default function SimonSays() {
 
     function startGame() {
         setGameState({ isOn: true, isLost: false, score: 0 })
+    }
 
+    function closeLostModle() {
+        setGameState({ isOn: false, isLost: false, score: 0 })
     }
 
     function onToggleModal() {
         setIsIntroModalOpen(!isIntroModalOpen)
-
         startGame()
     }
 
@@ -35,12 +38,11 @@ export default function SimonSays() {
     }
 
     return (<>
+        <LostModal gameState={gameState} closeLostModle={closeLostModle} startGame={startGame} />
         <Modal isIntroModalOpen={isIntroModalOpen} onToggleModal={onToggleModal} />
         <h2 className="score"> higth score: {higthScore}</h2>
         <section className="main-layout">
             <BoardGame gameState={gameState} onLose={onLose} setGameState={setGameState} />
-
-
         </section>
     </>
     )
