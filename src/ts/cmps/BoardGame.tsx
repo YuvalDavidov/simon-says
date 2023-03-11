@@ -75,7 +75,8 @@ export default function BoardGame({ gameState, onLose, setGameState }: IProps) {
     }
 
     async function simonTurn() {
-        await utilService.wait(SHOW_COLOR_TIME * 2)
+        if (gameState.score >= 10) await utilService.wait(SHOW_COLOR_TIME * 1.5)
+        else await utilService.wait(SHOW_COLOR_TIME * 2)
         const simonChosenColor = utilService.getRandomItemFromArray(simonColors)
 
         // this will trigger useEffect which will palySimonOrder()

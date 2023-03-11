@@ -41,7 +41,7 @@ export default function SimonSays() {
         <LostModal gameState={gameState} closeLostModle={closeLostModle} startGame={startGame} />
         <Modal isIntroModalOpen={isIntroModalOpen} onToggleModal={onToggleModal} />
         <section className="main-layout">
-            <h2 className="score full"> higth score: {higthScore}</h2>
+            <h2 className="higth-score full"> higth score: {higthScore}</h2>
             <section className="actions-btns full">
                 <button onClick={() => { setIsIntroModalOpen(!isIntroModalOpen) }}>i</button>
                 <button onClick={startGame}>new game</button>
