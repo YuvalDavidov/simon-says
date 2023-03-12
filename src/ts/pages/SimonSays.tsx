@@ -17,8 +17,6 @@ export default function SimonSays() {
     const [isIntroModalOpen, setIsIntroModalOpen] = useState<boolean>(true)
     const [gameState, setGameState] = useState<IState['gameState']>({ isOn: false, isLost: false, score: 0 })
 
-    useEffect(() => { console.log(gameState); }, [gameState])
-
     function startGame() {
         setGameState({ isOn: true, isLost: false, score: 0 })
     }

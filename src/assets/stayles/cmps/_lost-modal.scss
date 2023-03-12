@@ -2,7 +2,7 @@
     position: fixed;
     background-color: red;
     background: $bg-modal-color;
-    left: 35vw;
+    left: calc(50vw - 10%);
     top: 20px;
     padding: 20px;
     border-radius: 10px;
@@ -19,7 +19,6 @@
 
         & button {
             padding: 5px 10px;
-
             border: none;
             border-radius: 20px;
             background-color: $bg-btns-color;

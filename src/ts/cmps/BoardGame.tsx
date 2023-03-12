@@ -31,6 +31,7 @@ export default function BoardGame({ gameState, onLose, setGameState }: IProps) {
     const colorTimeoutId = useRef<any>(null)
 
     useEffect(() => {
+        if (gameState.isLost) return
         if (gameState.isOn && gameState.score === 0) {
             newGame()
         }
@@ -42,7 +43,6 @@ export default function BoardGame({ gameState, onLose, setGameState }: IProps) {
 
     useEffect(() => {
 
-        console.log(userOrder.at(-1), isUserTrun);
         if (!isUserTrun || !userOrder.at(-1)) return
 
         if (simonOrder[userOrder.length - 1] !== userOrder.at(-1)) {
